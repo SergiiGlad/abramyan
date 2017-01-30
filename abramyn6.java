@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class abramyn6 {
 	
+	
 	public static int Max ( int x, int y ){
 		 
 		return x > y ? x : y;	}
@@ -28,8 +29,9 @@ public class abramyn6 {
 
 	public static void main(String[] args) {
 	
+
 		/*
-		 *  Abramyn, Chapter 6 , lf12 - lf18 
+		 *  Abramyn, Chapter 6 , lf12 - lf18 , lf28 - lf30
 		 */
 		
 		int a = 25, b = 20, c = 30;
@@ -97,10 +99,6 @@ public class abramyn6 {
 		}
 	    while ( year < 0 || year > 2017);
 		
-		
-	
-		
-		
 		do {
 			
 			if ( leapyear( year ) == true ) System.out.println(year+" is leap year");
@@ -108,7 +106,31 @@ public class abramyn6 {
 			year++;
 		} while (year <= 2017);
 		
+		// lf29
 		
+		int value;
+		String str;
+		
+		
+		System.out.println("Catch up value");
+		value = input.nextInt();
+		
+		str = Integer.toString( value );
+		
+		if ( value == 0)
+			System.out.println("Value is 0");
+		
+		if ( value < 0 )
+			if ( value % 2 == 0)
+				System.out.println(value+" even negative integer "+str.length()+" digit number");
+			else
+				System.out.println(value+" odd negative integer "+str.length()+" digit number");
+		
+		if ( value > 0 )
+			if ( value % 2 == 0)
+				System.out.println(value+" even positive integer "+str.length()+" digit number");
+			else
+				System.out.println(value+" odd positive integer "+str.length()+" digit number");
 		
 	}
 

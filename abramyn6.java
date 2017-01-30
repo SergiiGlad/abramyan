@@ -92,10 +92,10 @@ public class abramyn6 {
 		
 		do 	{
 			
-			System.out.println("Catch up year to 2017: ");
+			System.out.println("Catch up positive year to 2017: ");
 			year = input.nextInt();
 		}
-	    while ( year < 0 && year < 2017);
+	    while ( year < 0 || year > 2017);
 		
 		
 	

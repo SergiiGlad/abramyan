@@ -1,13 +1,29 @@
+import java.util.Scanner;
 
 public class abramyn6 {
 	
 	public static int Max ( int x, int y ){
 		 
-		return x > y ? x : y;
-	}
+		return x > y ? x : y;	}
 	
 	public static int Min ( int x, int y ) {
 		return x < y ? x : y;
+	}
+	
+	public static boolean leapyear (int year ){
+		
+		// true if year is leap
+		
+		if ( year%4 == 0  ) 
+			if ( year%100 == 0 && year%400 != 0 ) 
+				return false;
+			else
+				return true;
+	
+		else
+			return false;
+		
+		
 	}
 
 	public static void main(String[] args) {
@@ -67,6 +83,31 @@ public class abramyn6 {
 		if ( a == c ) index = 2;
 		
 		System.out.println("Index different value :"+index);
+		
+		// lf28 calculate leap year
+		
+		Scanner input = new Scanner( System.in );
+
+		int year;
+		
+		do 	{
+			
+			System.out.println("Catch up year to 2017: ");
+			year = input.nextInt();
+		}
+	    while ( year < 0 && year < 2017);
+		
+		
+	
+		
+		
+		do {
+			
+			if ( leapyear( year ) == true ) System.out.println(year+" is leap year");
+			else System.out.println(year+" is not leap year");
+			year++;
+		} while (year <= 2017);
+		
 		
 		
 	}

@@ -1,4 +1,0 @@
-output"Hello";
-output"hi";
-output"now are you";
-new feature;
